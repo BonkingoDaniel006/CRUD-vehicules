@@ -24,5 +24,21 @@ public class GestionStock {
         return true;
     }
 
-    
+    public Vehicule chercherVehicule(String immatriculation) {
+        return stock.get(immatriculation);
+
+    }
+
+    public boolean modifierImmatriculationVehicule (String ancienMatricule, String NouveauMatricule) {
+        String ancienneCle = ancienMatricule;
+        String nouvellecle = NouveauMatricule;
+
+        if (!stock.containsKey(nouvellecle) || stock.containsKey(nouvellecle)) {
+            return false;
+        }
+        Vehicule vehicule = stock.remove(ancienneCle);
+        vehicule.setImmatriculation(NouveauMatricule);
+        stock.put(nouvellecle, vehicule);
+        return true;
+    }
 }
