@@ -70,4 +70,16 @@ public class GestionStock {
         vehicule.setEnRevision(Enrevision);// on modifier Enrevision
         return true;
     }
+
+    public boolean suprimerVehicule (String immatriculation) {
+
+        if (!stock.containsKey(immatriculation)) {
+            return false; // Le véhicule n'existe pas dans le stock
+        }
+    
+        // Supprime l'entrée de la Map grâce à sa clé (l'immatriculation)
+        stock.remove(immatriculation);
+        return true; // Suppression réussie
+
+        }
 }
