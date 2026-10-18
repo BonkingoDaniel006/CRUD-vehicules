@@ -20,7 +20,8 @@ public class GestionStock {
     }
 
     public Vehicule chercherVehicule(String immatriculation) {
-        return stock.get(immatriculation);
+        Vehicule vehicule = stock.get(immatriculation);
+        return vehicule;
     }
 
     public boolean modifierImmatriculationVehicule(String ancienMatricule, String nouveauMatricule) {
