@@ -31,7 +31,7 @@ public class Vehicule {
     public void setMarque (String marque) {
         this.marque = marque;
     }
-    public  void setprix(Double prix) {
+    public  void setPrix(Double prix) {
         this.prix = prix;
 
     }
