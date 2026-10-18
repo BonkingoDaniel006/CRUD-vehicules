@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -82,4 +84,15 @@ public class GestionStock {
         return true; // Suppression réussie
 
         }
+
+    // Indique si le stock est vide.
+    public boolean estVide() {
+        return stock.isEmpty();
+    }
+
+    //renvoie la liste de tout les produits
+
+    public List<Vehicule> getTousLesVehicules() {
+        return new ArrayList<>(stock.values());
+    }
 }
