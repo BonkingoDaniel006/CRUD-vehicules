@@ -28,6 +28,7 @@ public class Main {
                 case 2 -> afficherTousLesVehiculesUI(gestionStock);
                 case 3 -> chercherVehiculeUI(scanner, gestionStock);
                 case 4 -> modifierVehiculeUI(scanner, gestionStock);
+                case 5 -> supprimerVehiculeUI(scanner, gestionStock);
                 
             }
         }
@@ -150,10 +151,29 @@ public class Main {
 
             if (succes){
                 System.out.println("matricule mit à jour");
-                
+
             }
         }else {
             System.out.println("Choix invalide.");
+        }
+    }
+
+    private static void supprimerVehiculeUI(Scanner scanner, GestionStock gestionStock) {
+        System.out.print("Entrez l'immatriculation du vehicule à supprimer : ");
+        String immatriculation = scanner.nextLine();
+
+        Vehicule vehicule = gestionStock.chercherVehicule(immatriculation);
+        if (vehicule == null) {
+            System.out.println("Produit introuvable.");
+            return;
+        }
+        else {
+            boolean succes = gestionStock.supprimerVehicule(immatriculation);
+            if (succes) {
+                System.out.println("Produit supprimé du stock.");
+            } else {
+                System.out.println("Erreur : Produit introuvable.");
+            }
         }
     }
 

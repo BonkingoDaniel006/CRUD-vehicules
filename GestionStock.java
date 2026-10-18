@@ -74,7 +74,7 @@ public class GestionStock {
         return true;
     }
 
-    public boolean suprimerVehicule (String immatriculation) {
+    public boolean supprimerVehicule (String immatriculation) {
 
         if (!stock.containsKey(immatriculation)) {
             return false; // Le véhicule n'existe pas dans le stock
