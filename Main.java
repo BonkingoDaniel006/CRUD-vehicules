@@ -29,7 +29,11 @@ public class Main {
                 case 3 -> chercherVehiculeUI(scanner, gestionStock);
                 case 4 -> modifierVehiculeUI(scanner, gestionStock);
                 case 5 -> supprimerVehiculeUI(scanner, gestionStock);
-                
+                case 6 -> {
+                    System.out.println("Fermeture du programme. Au revoir !");
+                    enExecution = false;
+                }
+                default -> System.out.println("Choix invalide. Veuillez réessayer.");
             }
         }
 
